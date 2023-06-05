@@ -1,1 +1,19 @@
-<p>books-list works!</p>
+<table class="table table-hover" *ngIf = "books.length > 0">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>ISBN</th>
+        <th>Author</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let book of books">
+        <td>{{book.Title}}</td>
+        <td>{{book.ISBN}}</td>
+        <td>{{book.Author}}</td>
+        <td>{{book.Year}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf = "!(books.length > 0)" [ngStyle]="{'text-align': 'center', 'color': 'black'}">No books are currently available!</p>
