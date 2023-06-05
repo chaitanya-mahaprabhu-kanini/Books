@@ -14,4 +14,8 @@ export class BooksService {
   getAllBooks(): Observable<Book[]>{
     return this.http.get<Book[]>("https://localhost:7179/api/Books");
   }
+
+  addBook(addBookRequest: Book): Observable<Book>{
+    return this.http.post<Book>("https://localhost:7179/api/Books", addBookRequest);
+  }
 }

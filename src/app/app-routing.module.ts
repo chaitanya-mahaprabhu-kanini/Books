@@ -1,3 +1,5 @@
+import { EditBookComponent } from './edit-book/edit-book.component';
+import { AddBookComponent } from './add-book/add-book.component';
 import { BooksListComponent } from './books-list/books-list.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +13,14 @@ const routes: Routes = [
   {
     component: BooksListComponent,
     path: "books"
+  },
+  {
+    component: AddBookComponent,
+    path: "add"
+  },
+  {
+    component: EditBookComponent,
+    path: "edit"
   }
 ];
 
