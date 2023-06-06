@@ -1,0 +1,13 @@
+<div class = "container my-5">
+    <h1 class = "mb-3">Delete book information</h1>
+    <form #form = "ngForm" (ngSubmit) = "deleteBook()">
+        
+        
+          <div class="mb-3">
+            <label for="id" class="form-label">ID:</label>
+            <input type="string" class="form-control" id="id" placeholder="Enter ID" name="year" [(ngModel)] = "id">
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

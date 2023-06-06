@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksListComponent implements OnInit{
   present: boolean = true;
-  books: Book[] = [];
+  b: Book[] = [];
   constructor(private booksService: BooksService){
 
   }
@@ -17,7 +17,7 @@ export class BooksListComponent implements OnInit{
     this.booksService.getAllBooks().subscribe({
       next: (books) => {
         console.log(books);
-        this.books = books;
+        this.b = books;
       },
       error: (response) => {
         console.log(response);

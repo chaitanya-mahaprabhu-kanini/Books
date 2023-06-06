@@ -18,4 +18,16 @@ export class BooksService {
   addBook(addBookRequest: Book): Observable<Book>{
     return this.http.post<Book>("https://localhost:7179/api/Books", addBookRequest);
   }
+
+  getBook(id: string): Observable<Book>{
+    return this.http.get<Book>("https://localhost:7179/api/Books"+id);
+  }
+
+  updateBook(id: string, updateBook: Book): Observable<Book>{
+    return this.http.put<Book>("https://localhost:7179/api/Books",updateBook);
+  }
+
+  deleteBook(id: string): Observable<Book>{
+    return this.http.delete<Book>("https://localhost:7179/api/Books"+id);
+  }
 }

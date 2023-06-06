@@ -1,1 +1,27 @@
-<p>edit-book works!</p>
+<div class = "container my-5">
+    <h1 class = "mb-3">Edit book information</h1>
+    <form #form = "ngForm" (ngSubmit) = "updateBook()">
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">ID:</label>
+            <input type="number" class="form-control" id="id" placeholder="Enter ID" name="id">
+          </div>
+        <div class="mb-3 mt-3">
+          <label for="title" class="form-label">Title:</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title" [(ngModel)] = "bookDetails.Title">
+        </div>
+        <div class="mb-3">
+          <label for="isbn" class="form-label">ISBN:</label>
+          <input type="text" class="form-control" id="isbn" placeholder="Enter ISBN" name="isbn" [(ngModel)] = "bookDetails.ISBN">
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author:</label>
+            <input type="text" class="form-control" id="author" placeholder="Enter Author:" name="author" [(ngModel)] = "bookDetails.Author">
+          </div>
+          <div class="mb-3">
+            <label for="year" class="form-label">Year:</label>
+            <input type="number" class="form-control" id="year" placeholder="Enter Year:" name="year" [(ngModel)] = "bookDetails.Year">
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

@@ -1,3 +1,4 @@
+import { DeleteComponent } from './delete/delete.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BooksListComponent } from './books-list/books-list.component';
@@ -20,7 +21,11 @@ const routes: Routes = [
   },
   {
     component: EditBookComponent,
-    path: "edit"
+    path: "edit/:id"
+  },
+  {
+    component: DeleteComponent,
+    path: "delete/:id"
   }
 ];
 
