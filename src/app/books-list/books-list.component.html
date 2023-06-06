@@ -1,4 +1,4 @@
-<table class="table table-hover" *ngIf = "b.length > 0">
+<!-- <table class="table table-hover" *ngIf = "b.length > 0">
     <thead>
       <tr>
         <th>Title</th>
@@ -16,5 +16,27 @@
       </tr>
     </tbody>
   </table>
-  <p *ngIf = "!(b.length > 0)" [ngStyle]="{'text-align': 'center', 'color': 'black'}">No books are currently available!</p>
+  <p *ngIf = "!(b.length > 0)" [ngStyle]="{'text-align': 'center', 'color': 'black'}" class = "no-books-message">No books are currently available!</p>
+  <router-outlet></router-outlet> -->
+  <table class="table table-hover" *ngIf="b.length > 0">
+    <thead>
+      <tr>
+        <th style="color: steelblue;">Title</th>
+        <th style="color: steelblue;">ISBN</th>
+        <th style="color: steelblue;">Author</th>
+        <th style="color: steelblue;">Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of b">
+        <td>{{book.title}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 *ngIf="!(b.length > 0)" [ngStyle]="{'text-align': 'center', 'color': 'steelblue'}">No books are currently available!</h3>
+  <br/><br/>
   <router-outlet></router-outlet>
+  

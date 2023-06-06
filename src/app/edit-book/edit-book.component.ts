@@ -9,11 +9,11 @@ import { Book } from '../models/book.model';
   styleUrls: ['./edit-book.component.css']
 })
 export class EditBookComponent implements OnInit{
-  bookDetails: Book = {
-    Title: "",
-    ISBN: "",
-    Author: "",
-    Year: 0
+  bookDetails: any = {
+    title: "",
+    isbn: "",
+    author: "",
+    year: 0
   };
   constructor(private route: ActivatedRoute, private booksService: BooksService, private router: Router){}
   ngOnInit(): void {
